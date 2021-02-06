@@ -1,13 +1,21 @@
-/*import "variables";
-import "mixins";
-import "normalize";
-import "layout";
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "layout";
 
 /* Components */
-//import "components/form_field";
+@import "components/_form_field.scss";
+@import "components/_page-title.scss";
+@import "components/_button.scss";
+@import "components/_links.scss";
+@import "components/_table.scss";
+@import "components/_personaldata.scss";
+@import "components/_chat.scss";
 
 /* Sections */
-//import "section/registration_form";
+@import "sections/_sidebar.scss";
+@import "sections/_top-bar.scss";
+@import "sections/_container.scss";
 
 /* Pages/Views */
-//import "pages/registration"; */
+/*@import "pages/registration";*/

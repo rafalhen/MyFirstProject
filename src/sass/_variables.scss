@@ -1,11 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 /* Colors */
-//$paragraph-color: #000000;
-//$brand-main-color: #ff0000;
+$paragraph-color: #000000;
+$brand-main-color: #ff0000;
+$background-color: #B7CFB6;
+$other-background-color: #80C77B;
+$background-menu: #C7BE7B;
+$background-container: #E3E2DE;
+
+$text-color: #00071C;
+$text-color-light: #DFE0E6;
 
 /* Font sizes */
-//$paragraph-font-size: 16px;
+$paragraph-font-size: 16px;
 
 /* Fonts */
-//$brand-font: "Open Sans", Helvetica, Arial;
-//$paragraph-font: Helvetica, Arial; 
+$brand-font: "Open Sans", Helvetica, Arial;
+$paragraph-font: Helvetica, Arial;
+
+$text-font: 'Roboto', sans-serif;
+$header-font: 'Roboto', sans-serif;
+$logo-font: 'Noto Sans', sans-serif;
+
