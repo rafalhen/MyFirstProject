@@ -36,7 +36,7 @@
                                 <a class="nav-link" href="#banners"><img src="vendor/icons/banners.svg" class="icon-banners icon" alt="">Banners</a>
                             </li>
                             <li class="nav-list">
-                                <a class="nav-link" href="#personal data"><img src="vendor/icons/#Personal" class="icon-personal icon" alt="">Personal data</a>
+                                <a class="nav-link" href="#personaldata"><img src="vendor/icons/#Personal" class="icon-personal icon" alt="">Personal data</a>
                             </li>
                             <li class="nav-list">
                                 <a class="nav-link" href="#payout"><img src="vendor/icons/payout.svg" class="icon-payout icon" alt="">Payout</a>
@@ -47,27 +47,6 @@
                         </ul>                 
                     </nav>
 
-                    <div class="top-bar">
-                        <div class="responsible-line"></div>
-                        <ul class="top-menu">
-                            <li class="top-link">
-                                <a class="nav-item" href="#"><img src="vendor/icons/wallet.svg" class="icon-wallet icon" alt="">$1,500.00</a>
-                            </li>
-                            <li class="top-link">
-                                <a class="nav-item" href="#"><img src="vendor/icons/arrow-down.svg" class="icon-arrowdown icon" alt=""></a>
-                            </li>
-                            <li class="top-link">
-                                <a class="nav-item" href="#"><img src="vendor/icons/notification.svg" class="icon-notification icon"></a>
-                            </li>
-                            <li class="top-link">
-                                <a class="nav-item" href="#"><img src="vendor/icons/profile.svg" class="icon-profile icon" alt="">Rafał Hen</a>
-                            </li>
-                            <li class="top-link">
-                                <a class="nav-item" href="#"><img src="vendor/icons/quit.svg" class="icon-quit icon" alt=""></a>
-                            </li>
-                        </ul>
-                    </div>
-                    
                     <div class="contact">
                         <div class="responsible-person"></div>
                         <div class="manager-title">
@@ -82,6 +61,80 @@
                     </div>
                 </aside>
             </section>
+
+        <!--Topbar-->
+            <div class="topbar">
+                <div class="topbar-up">
+                    <ul class="topbar-links">
+                        <li class="topbar-data">
+                            <a href="#"><img src="vendor/icons/wallet.svg" class="icon-wallet icon" alt=""></a>
+                            <div class="balance">$1,500.00</div>
+                            <a href="#"><img src="vendor/icons/arrow-down.svg" class="icon-arrow-down icon" alt=""></a>
+                        </li>
+                        <li class="topbar-data">
+                            <a href="#"><img src="vendor/icons/notification.svg" class="icon-notification icon" alt=""></a>
+                        </li>
+                        <li class="topbar-data">
+                            <a href="#login"><img src="vendor/icons/profile.svg" class="icon-profile icon" alt=""></a>
+                            <div class="name-profile">Rafał Hen</div>
+                        </li>
+                        <li class="topbar-data">
+                            <a href="#quit"><img src="vendor/icons/quit.svg" class="icon-quit icon" alt=""></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+        <!--Dashboard-->
+                <div id="general" class="general active page">
+                    <div class="container">
+                    <div class="title">
+                        <h3>General statistic</h3>
+                    </div>
+                    <div class="form-body">
+                        <form class="form" action="">
+                        <input class="form-field" type="date">
+                        <input class="form-field" type="date">
+                        <a href="#" class="btn btn-refresh"><img src="vendor/icons/refresh.svg" class="icon-refresh" alt=""></a>
+                        </form>
+                    </div>
+                    <div class="table-wrapper">
+                        <div class="table-row-wrapper">
+                        <div class="column">
+                            <div class="table-row">
+                            <p>Visit Signups</p>
+                            <p class="number">124</p>
+                            </div>
+                            <div class="table-row">
+                            <p>FTD</p>
+                            <p class="number">445</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="table-row">
+                            <p>Net Deposit</p>
+                            <p class="number">564</p>
+                            </div>
+                            <div class="table-row">
+                            <p>Turn Over</p>
+                            <p class="number">432</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                        <h5>Earnings chart</h5>
+                        </div>
+                        <div class="chart" style="position: relative;">
+                        <canvas id="myChart" width="800" height="350"></canvas>
+                        </div>
+                    </div>
+                    </div>
+                </div>  
+
+                
+
         </div>
     </body>
 </html>
