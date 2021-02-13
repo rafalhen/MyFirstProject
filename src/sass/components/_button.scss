@@ -1,0 +1,22 @@
+.btn {
+    min-height: 30px;
+    min-width: 30px;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    color: $text-color;
+    display: inline-flex;
+
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-refresh {
+    img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
