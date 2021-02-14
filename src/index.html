@@ -9,6 +9,58 @@
         <link rel="stylesheet" href="./vendor/icons">
     </head>
     <body>
+        <!--Modale-->
+        <div class="overlay overlay-modal" id="overlay-modal">
+            <div id="quit" class="modal">
+                <div class="title-modal">
+                    <h5>Do you really want to quit?</h5>
+                </div>
+                <div class="modal-body">
+                    <a href="#" class="btn btn-cancel js--close-modal">Cancel</a>
+                    <a href="#" class="btn btn js--close-modal">Quit</a>
+                </div>
+            </div>
+        
+
+            <div id="login" class="modal">
+                <div class="title login-title">
+                    <h3>Login</h3>
+                </div>
+                <div class="login-wrapper">
+                    <form action="" method="POST">
+                        <input type="text" name="user-name" placeholder="login name">
+                        <input type="text" name="password" placeholder="password">
+                        <a href="#" class="btn js--close-modal">Enter</a>
+                    </form>
+                </div>
+            </div>
+
+            <div id="chat" class="modal chat">
+                <div class="title chat-title">
+                    <h3>Online chat with your personal manager</h3>
+                    <a href="#" class="js--close-modal"><img src="vendor/icons/close.svg" class="icon-close icon" alt=""></a>
+                </div>
+                <div class="chat-person-wrapper">
+                    <div class="manager-image-chat">
+                        <img src="vendor/images/20190815_141233_HDR.jpg" alt="">
+                    </div>
+                    <div class="chat-name">
+                        <h4>Rafał Hen</h4>
+                        <p class="btn btn-online">Online</p>
+                    </div>
+                </div>
+                <div id="chat-box" class="messages">
+                    <div class="message answer">
+                        Hello. What can I help you?
+                    </div>
+                </div>
+                <div class="answer-box">
+                    <input class="form-field chat-input" type="text" placeholder="Enter the message...">
+                    <a href="#" class="btn btn-input">Send a message</a>
+                </div>
+            </div>
+        </div>
+
         <div class="layout">
         <!--Sidebar-->
             <section class="menu">
@@ -92,7 +144,7 @@
                         <h3>General statistic</h3>
                     </div>
                     <div class="form-body">
-                        <form class="form" action="">
+                        <form class="form">
                         <input class="form-field" type="date">
                         <input class="form-field" type="date">
                         <a href="#" class="btn btn-refresh"><img src="vendor/icons/refresh.svg" class="icon-refresh" alt=""></a>
@@ -139,7 +191,7 @@
                         <h3>Detail statistic</h3>
                     </div>
                     <div class="form-body">
-                        <form class="form" action="">
+                        <form class="form">
                         <input class="form-field" type="date">
                         <input class="form-field" type="date">
                         <a href="#" class="btn btn-refresh"><img src="vendor/icons/refresh.svg" class="icon-refresh" alt=""></a>
@@ -279,11 +331,91 @@
                         <div class="title">
                             <h3>Links</h3>
                         </div>
-                        
+                        <div class="link-wrapper">
+                            <div class="button-wrapper">
+                                <a href="#" class="btn btn-add">+ Add New</a>
+                            </div>
+                            <ul class="links-columns">
+                                <li>
+                                    <p>Home page</p>
+                                    <a href="#">http://www.homepage.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Currently offer</p>
+                                    <a href="#">http://www.currently.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Blurpix</p>
+                                    <a href="#">http://www.blurpix.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Your site</p>
+                                    <a href="#">http://www.yoursite.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Google</p>
+                                    <a href="#">http://www.google.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Facebook</p>
+                                    <a href="#">http://www.facebook.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Dashboard</p>
+                                    <a href="#">http://www.dashboard.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Twitter</p>
+                                    <a href="#">http://www.twitter.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Piece of wind</p>
+                                    <a href="#">http://www.pieceofwind.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="button-wrapper">
+                                <a href="#" class="btn btn-add">+ Add Class</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-
+            
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
