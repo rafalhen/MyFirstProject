@@ -24,18 +24,17 @@
         border-bottom: 1.5px solid black;
         height: 50px;
         margin: 5px 10px;
-      }
-
-      p {
-        display: inline-block;
-        font-size: 17px;
-        color: $text-color;
-      }
-
-      .number {
-        color: green;
-      }
       
+        p {
+          display: inline-block;
+          font-size: 17px;
+          color: $text-color;
+        }
+
+        .number {
+          color: green;
+        }
+      }
     }
   }
 }
