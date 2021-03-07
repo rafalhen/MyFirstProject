@@ -49,9 +49,20 @@
         background-color: rgb(20, 20, 20);
 
         a {
+          color: white;
+        }
+
+        .name-profile:hover {
           color: $text-color-light;
         }
 
+        img {
+          filter: invert(75%) contrast(100%) brightness(100%);
+        }
+
+        .balance {
+          color: $text-color-light;
+        }
         &::before {
           position: absolute;
           content: "";

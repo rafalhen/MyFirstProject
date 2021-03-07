@@ -21,3 +21,15 @@
   }
 }
 
+@media(max-width: 768px) {
+  .btn-refresh {
+    padding: 0 10px;
+    min-height: 30px;
+    min-width: 30px;
+
+    img {
+      height: 12px;
+      width: 12px;
+    }
+  }
+}
