@@ -4,13 +4,11 @@
 function toggleMenu() {
     const navButton = document.querySelector('.burger');
     const sideNav = document.querySelector('.menu');
-    const overlay = document.querySelector('.overlay-nav');
 
     navButton.addEventListener('click', function(e){
         e.preventDefault();
 
-        sideNav.classList.toggle('nav-avtive');
-        overlay.classList.toogle('overlay-active');
+        sideNav.classList.toggle('nav-active');
     });
 }
 
@@ -108,9 +106,12 @@ const initModal = function(event) {
             event.preventDefault();
             const id = event.currentTarget.getAttribute('href').replace('#', '');
             for(const modal of modals) {
-                modal.classList.toogle('active', modal.id === id);
+                modal.classList.toggle('active', modal.id === id);
+                if(modal.classList.contains("active")){
+                    overlayModal.classList.add('show');
+                }
+
             }
-            overlayModal.classList.remove('show');
         });
     }
 };
