@@ -68,3 +68,17 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    #login.modal {
+        min-width: 100px;
+        padding: 10px;
+
+        .login-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
