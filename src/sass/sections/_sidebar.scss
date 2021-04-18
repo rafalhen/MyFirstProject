@@ -15,7 +15,7 @@ aside {
   align-items: center;
   height: 100%;
   width: 200px;
-  color: $text-color;
+  color:$text-color;
   z-index: 2;
 
   .logo {
@@ -39,6 +39,7 @@ aside {
     padding: 0;
     width: 200px;
     margin: 0;
+    color: $text-color;
 
     li {
       position: relative;
@@ -46,8 +47,7 @@ aside {
       align-items: center;
       display: flex;
       height: 50px;
-      color: $text-color;
-
+      
       &:hover {
         background-color: rgb(20, 20, 20);
 
@@ -119,6 +119,16 @@ aside {
         top: -40px;
       }
     }
+
+    .rwd-top-bar {
+      width: 100%;
+
+      .rwd-line {
+        width: 100%;
+        margin: 10px 0;
+        border-top: 1px solid;
+      }
+    }
    
   }
 } 
@@ -128,21 +138,45 @@ aside {
     display: block;
     width: 48px;
     overflow-y: scroll;
+
+    aside {
+      left: -180px;
+    }
+
+    &.nav-active {
+      width: 200px;
+
+      aside {
+        left: 0;
+      }
+    }
   }
 
   aside {
     position: fixed;
     left: 0;
     transition: 0.5s ease;
-    transform: translateX(-142px);
 
     .contact {
-      opacity: 0;
       transition: 0.5s ease;
     }
+  }
 
-    .sidebar-links li {
-      opacity: 0;
+  .menu.nav-active .sidebar-nav {
+    transform: translateX(0%);
+    display: block;
+    background-color: $background-menu;
+
+
+    .nav-link {
+
+      &:hover {
+        background-color: rgb(20, 20, 20);
+
+        a {
+          color: $text-color-light;
+        }
+      }
     }
   }
 }
