@@ -47,16 +47,16 @@ aside {
       align-items: center;
       display: flex;
       height: 50px;
+
+      .icon {
+        filter: invert(25%) contrast(25%) brightness(25%);
+      }
       
       &:hover {
         background-color: rgb(20, 20, 20);
 
         a {
           color: $text-color-light;
-        }
-
-        img {
-          filter: invert(75%) contrast(100%) brightness(100%);
         }
 
         &::before {
