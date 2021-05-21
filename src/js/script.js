@@ -18,7 +18,7 @@ const navLinks = document.querySelectorAll('.nav-list .nav-link');
 const pages = document.querySelectorAll('.page');
 
 const titleClickHandler = function(event){
-    event.preventDefault();
+    
 
     const clickedPage = this;
     const activeLinks = document.querySelectorAll('.nav-list a.active');

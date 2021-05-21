@@ -150,6 +150,14 @@ aside {
         left: 0;
       }
     }
+
+    .sidebar-nav {
+      display: none;
+    }
+
+    .contact {
+      display: none;
+    }
   }
 
   aside {
@@ -178,5 +186,8 @@ aside {
         }
       }
     }
+  }
+  .menu.nav-active .contact {
+    display: block;
   }
 }
