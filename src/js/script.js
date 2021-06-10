@@ -4,11 +4,13 @@
 function toggleMenu() {
     const navButton = document.querySelector('.burger');
     const sideNav = document.querySelector('.menu');
+    const Layout = document.querySelector('.layout');
 
     navButton.addEventListener('click', function(e){
         e.preventDefault();
 
         sideNav.classList.toggle('nav-active');
+        Layout.classList.toggle('active');
     });
 }
 
@@ -93,7 +95,6 @@ const initModal = function(event) {
     for(const button of modalClose) {
         button.addEventListener('click', closeBox);
     }
-    overlayModal.addEventListener('click', closeBox);
 
     document.addEventListener('keyup', (e) => {
         if(e.key === 27) {
