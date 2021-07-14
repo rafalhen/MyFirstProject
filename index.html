@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyFirstProject</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./vendor/icons">
+    </head>
+    <body>
+        <!--Modale-->
+        <div class="overlay overlay-modal" id="overlay-modal">
+            <div id="quit" class="modal">
+                <div class="title-modal">
+                    <h5>Do you really want to quit?</h5>
+                </div>
+                <div class="modal-body">
+                    <a href="#" class="btn btn-cancel js--close-modal">Cancel</a>
+                    <a href="#" class="btn btn js--close-modal">Quit</a>
+                </div>
+            </div>
+        
+
+            <div id="login" class="modal">
+                <div class="title login-title">
+                    <h3>Login</h3>
+                </div>
+                <div class="login-wrapper">
+                    <form action="#" method="POST">
+                        <input type="text" name="user-name" placeholder="login name">
+                        <input type="text" name="password" placeholder="password">
+                        <a href="#" class="btn js--close-modal">Enter</a>
+                    </form>
+                </div>
+            </div>
+
+            <div id="chat" class="modal chat">
+                <div class="title chat-title">
+                    <h3>Online chat with your personal manager</h3>
+                    <a href="#" class="js--close-modal"><img src="vendor/icons/close.svg" class="icon-close icon" alt=""></a>
+                </div>
+                <div class="chat-person-wrapper">
+                    <div class="manager-image-chat">
+                        <img src="vendor/images/20190815_141233_HDR.jpg" alt="">
+                    </div>
+                    <div class="chat-name">
+                        <h4>Rafał Hen</h4>
+                        <p class="btn btn-online">Online</p>
+                    </div>
+                </div>
+                <div id="chat-box" class="messages">
+                    <div class="message answer">
+                        Hello. What can I help you?
+                    </div>
+                </div>
+                <div class="answer-box">
+                    <input class="form-field chat-input" type="text" placeholder="Enter the message...">
+                    <a href="#" class="btn btn-input">Send a message</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout">
+        <!--Sidebar-->
+            <section class="menu">
+                <aside class="sidebar">
+                    <div class="logo">
+                        <h1>Just do it</h1>
+                        <div class="burger">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
+                    </div>
+                    <nav class="sidebar-nav">
+                        <ul class="sidebar-links">
+                            <li class="nav-list">
+                                <a class="nav-link active" href="#general"><img src="vendor/icons/general.svg" class="icon-general icon" alt="">General</a>
+                            </li>
+                            <li class="nav-list">
+                                <a class="nav-link" href="#details"><img src="vendor/icons/details.svg" class="icon-details icon" alt="">Details</a>
+                            </li>
+                            <li class="nav list">
+                                <a class="nav-link" href="#links"><img src="vendor/icons/links.svg" class="icon-list icon" alt="">Icons</a>
+                            </li>
+                            <li class="nav list">
+                                <a class="nav-link" href="#banners"><img src="vendor/icons/banners.svg" class="icon-banners icon" alt="">Banners</a>
+                            </li>
+                            <li class="nav-list">
+                                <a class="nav-link" href="#personaldata"><img src="vendor/icons/personaldata.svg" class="icon-personal icon" alt="">Personal data</a>
+                            </li>
+                            <li class="nav-list">
+                                <a class="nav-link" href="#payout"><img src="vendor/icons/payout.svg" class="icon-payout icon" alt="">Payout</a>
+                            </li>
+                            <li class="nav-list">
+                                <a class="nav-link" href="#postback"><img src="vendor/icons/postback.svg" class="icon-postback icon" alt="">Postback</a>
+                            </li>
+                        </ul>                 
+                    </nav>
+
+                    <div class="contact">
+                        <div class="responsible-person"></div>
+                        <div class="manager-title">
+                            <h3>YOUR MANAGER</h3>
+                        </div>
+                        <div class="manager-profile">
+                            <div class="manager-image">
+                                <img src="vendor/images/20190815_141233_HDR.jpg" alt="">
+                            </div>
+                            <a href="#chat" class="profile-name js--open-modal">Rafał Hen</a>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+        <!--Topbar-->
+            <div class="topbar">
+                <div class="topbar-up">
+                    <ul class="topbar-links">
+                        <li class="topbar-data">
+                            <a href="#"><img src="vendor/icons/wallet.svg" class="icon-wallet icon" alt=""></a>
+                            <div class="balance">$1,500.00</div>
+                            <a href="#"><img src="vendor/icons/arrow-down.svg" class="icon-arrow-down icon" alt=""></a>
+                        </li>
+                        <li class="topbar-data">
+                            <a href="#"><img src="vendor/icons/notification.svg" class="icon-notification icon" alt=""></a>
+                        </li>
+                        <li class="topbar-data">
+                            <a href="#login" class="js--open-modal"><img src="vendor/icons/profile.svg" class="icon-profile icon" alt=""></a>
+                            <div class="name-profile">Rafał Hen</div>
+                        </li>
+                        <li class="topbar-data">
+                            <a href="#quit" class="js--open-modal"><img src="vendor/icons/quit.svg" class="icon-quit icon" alt=""></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+        <!--Dashboard-->
+                <div id="general" class="general active page">
+                    <div class="container">
+                    <div class="title">
+                        <h3>General statistic</h3>
+                    </div>
+                    <div class="form-body">
+                        <form class="form">
+                        <input class="form-field" type="date">
+                        <input class="form-field" type="date">
+                        <a href="#" class="btn btn-refresh"><img src="vendor/icons/refresh.svg" class="icon-refresh" alt=""></a>
+                        </form>
+                    </div>
+                    <div class="table-wrapper">
+                        <div class="table-row-wrapper">
+                            <div class="column">
+                                <div class="table-row">
+                                    <p>Visit Signups</p>
+                                    <p class="number">156</p>
+                                </div>
+                                <div class="table-row">
+                                    <p>FTD</p>
+                                    <p class="number">895</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="table-row">
+                                    <p>Net Deposit</p>
+                                    <p class="number">344</p>
+                                </div>
+                                <div class="table-row">
+                                    <p>Turn Over</p>
+                                    <p class="number">102</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            <h5>Earnings chart</h5>
+                        </div>
+                        <div class="chart" style="position: relative;">
+                            <canvas id="myChart" width="800" height="350"></canvas>
+                        </div>
+                    </div>
+                    </div>
+                </div>  
+    
+                <div id="details" class="page">
+                    <div class="container">
+                    <div class="title">
+                        <h3>Detail statistic</h3>
+                    </div>
+                    <div class="form-body">
+                        <form class="form">
+                        <input class="form-field" type="date">
+                        <input class="form-field" type="date">
+                        <a href="#" class="btn btn-refresh"><img src="vendor/icons/refresh.svg" class="icon-refresh" alt=""></a>
+                        </form>
+                    </div>
+                    <div class="empty-line"></div>
+                    <div class="scroll-wrapper">
+                        <table class="content-table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Tracker name</th>
+                            <th scope="col">Initialed date</th>
+                            <th scope="col">Visit</th>
+                            <th scope="col">Unique</th>
+                            <th scope="col">Signups</th>
+                            <th scope="col">FTD</th>
+                            <th scope="col">Depositors</th>
+                            <th scope="col">Deposits($)</th>
+                            <th scope="col">Payouts($)</th>
+                            <th scope="col">Turnover</th>
+                            <th scope="col">Deal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>aff/sam_test</td>
+                            <td>17/04/05 (12:45)</td>
+                            <td>235</td>
+                            <td>448</td>
+                            <td>84</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>34,485.00</td>
+                            <td>485.00</td>
+                            <td>45.00</td>
+                            <td>cpl(200)</td>
+                            </tr>
+                            <tr>
+                            <td>aff/leo_test</td>
+                            <td>15/08/02 (12:45)</td>
+                            <td>235</td>
+                            <td>448</td>
+                            <td>84</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>34,485.00</td>
+                            <td>485.00</td>
+                            <td>45.00</td>
+                            <td>cpl(200)</td>
+                            </tr>
+                            <tr>
+                            <td>aff/sam_test</td>
+                            <td>17/04/05 (12:45)</td>
+                            <td>235</td>
+                            <td>448</td>
+                            <td>84</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>34,485.00</td>
+                            <td>485.00</td>
+                            <td>45.00</td>
+                            <td>cpl(200)</td>
+                            </tr>
+                            <tr>
+                            <td>aff/leo_test</td>
+                            <td>15/08/02 (12:45)</td>
+                            <td>235</td>
+                            <td>448</td>
+                            <td>84</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>34,485.00</td>
+                            <td>485.00</td>
+                            <td>45.00</td>
+                            <td>cpl(200)</td>
+                            </tr>
+                            <tr>
+                            <td>aff/sam_test</td>
+                            <td>17/04/05 (12:45)</td>
+                            <td>235</td>
+                            <td>448</td>
+                            <td>84</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>34,485.00</td>
+                            <td>485.00</td>
+                            <td>45.00</td>
+                            <td>cpl(200)</td>
+                            </tr>
+                            <tr>
+                            <td>aff/leo_test</td>
+                            <td>15/08/02 (12:45)</td>
+                            <td>235</td>
+                            <td>448</td>
+                            <td>84</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>34,485.00</td>
+                            <td>485.00</td>
+                            <td>45.00</td>
+                            <td>cpl(200)</td>
+                            </tr>
+                            <tr>
+                            <td>aff/sam_test</td>
+                            <td>17/04/05 (12:45)</td>
+                            <td>235</td>
+                            <td>448</td>
+                            <td>84</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>34,485.00</td>
+                            <td>485.00</td>
+                            <td>45.00</td>
+                            <td>cpl(200)</td>
+                            </tr>
+                            <tr>
+                            <td>aff/leo_test</td>
+                            <td>15/08/02 (12:45)</td>
+                            <td>235</td>
+                            <td>448</td>
+                            <td>84</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>34,485.00</td>
+                            <td>485.00</td>
+                            <td>45.00</td>
+                            <td>cpl(200)</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="links" class="page">
+                    <div class="container">
+                        <div class="title">
+                            <h3>Links</h3>
+                        </div>
+                        <div class="link-wrapper">
+                            <div class="button-wrapper">
+                                <a href="#" class="btn btn-add">+ Add New</a>
+                            </div>
+                            <ul class="links-columns">
+                                <li>
+                                    <p>Home page</p>
+                                    <a href="#">http://www.homepage.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Currently offer</p>
+                                    <a href="#">http://www.currently.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Blurpix</p>
+                                    <a href="#">http://www.blurpix.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Your site</p>
+                                    <a href="#">http://www.yoursite.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Google</p>
+                                    <a href="#">http://www.google.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Facebook</p>
+                                    <a href="#">http://www.facebook.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Dashboard</p>
+                                    <a href="#">http://www.dashboard.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Twitter</p>
+                                    <a href="#">http://www.twitter.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Piece of wind</p>
+                                    <a href="#">http://www.pieceofwind.com</a>
+                                    <div class="icon-list">
+                                        <img src="vendor/icons/links.svg" class="icon-links" alt="">
+                                        <img src="vendor/icons/trash.svg" class="icon-trash" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="button-wrapper">
+                                <a href="#" class="btn btn-add">+ Add Class</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
